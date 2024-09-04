@@ -45,4 +45,4 @@ RUN curl -L https://github.com/opentripplanner/OpenTripPlanner/releases/download
 EXPOSE 8080
 
 # Establece el comando por defecto para construir y servir el gráfico
-CMD ["java", "-Xmx100m", "-jar", "opentripplanner.jar", "--load", "--serve", "/var/opentripplanner"]
+CMD ["java", "-Xmx200m", "-jar", "opentripplanner.jar", "--load", "--serve", "/var/opentripplanner"]
