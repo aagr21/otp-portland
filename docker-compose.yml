@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  otp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: otp
+    working_dir: /var/opentripplanner
+    volumes:
+      - ./data:/var/opentripplanner
+    ports:
+      - "8080:8080"
+    command: ["--build", "--serve", "/var/opentripplanner"]
